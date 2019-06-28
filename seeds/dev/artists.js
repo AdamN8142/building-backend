@@ -1,4 +1,4 @@
-const adamsArtists = require('../../migrations/data')
+const adamsArtists = require('../../data')
 
 const createArtist = (knex, artist) => {
   return knex('artists').insert({
