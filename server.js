@@ -28,7 +28,6 @@ app.get('/api/v1/songs', (request, response) => {
 });
 
 
-// GET a specific paper
 app.get('/api/v1/artists/:id', (request, response) => {
   database('artists').where('id', request.params.id).select()
     .then(artists => {
@@ -44,6 +43,8 @@ app.get('/api/v1/artists/:id', (request, response) => {
       response.status(500).json({ error });
     });
 });
+
+
 
 app.get('/api/v1/songs/:id', (request,response) => {
   database('songs').where('id', request.params.id).select()
